@@ -20,9 +20,6 @@ h3 {
 .btn {
 	background-color: #05fca2;
 	color: #333;
-	margin-top: 10px;
-	margin-left: 5px;
-	margin-right: 5px
 }
 
 /* button {
@@ -56,7 +53,7 @@ button:disabled {
 }
 
 .centered-form__form {
-  background: rgba(250, 250, 250, 0.9);
+  background-color: #fca205;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   padding: 0px 20px;
@@ -195,4 +192,49 @@ button:disabled {
   .chat__footer button {
     margin-right: 0px;
   }
+}
+input::-webkit-input-placeholder {
+	color: #333
+}
+input:focus::-webkit-input-placeholder {
+	color: #2cbcae
+}
+input:-moz-placeholder {
+	color: #333
+}
+input:focus:-moz-placeholder {
+	color: #2cbcae
+}
+input::-moz-placeholder {
+	color: #333
+}
+input:focus::-moz-placeholder {
+	color: #2cbcae
+}
+input:-ms-input-placeholder {
+	color: #333
+}
+input:focus:-ms-input-placeholder {
+	color: #2cbcae
+}
+.input-field label {
+	color: #333
+}
+.input-field input[type=text]:focus+label {
+	color: #333
+}
+.input-field input[type=text] {
+	border-bottom: 1px solid #333;
+	box-shadow: 0 1px 0 0 #333
+}
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #333;
+	box-shadow: 0 1px 0 0 #333
+}
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid #333;
+	box-shadow: 0 1px 0 0 #333
+}
+.input-field .prefix.active {
+	color: #333
 }
