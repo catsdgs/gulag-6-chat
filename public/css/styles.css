@@ -146,9 +146,10 @@ button:disabled {
 }
 
 .message {
-  padding: 7px;
+  padding: 10px;
   background-color: #fca205;
   margin-top: 10px;
+  display: table;
 }
 
 .message__title {
