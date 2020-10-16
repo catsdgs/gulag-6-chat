@@ -54,8 +54,6 @@ button:disabled {
 
 .centered-form__form {
   background-color: #fca205;
-  border: 1px solid #e1e1e1;
-  border-radius: 5px;
   padding: 0px 20px;
   margin: 20px;
   width: 230px;
