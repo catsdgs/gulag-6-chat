@@ -59,10 +59,9 @@ socket.on('newMessage', function(message){
     createdAt: formattedTime
   });
 
-  jQuery('#messages').append(html);
-  scrollToBottom();
-
   if (message.from != currentName) {
+    jQuery('#messages').append(html);
+    scrollToBottom();
     Push.create('New Message Sent/Received', {
         body: message.from + " says: " + message.text,
         timeout: 4000,
@@ -71,6 +70,14 @@ socket.on('newMessage', function(message){
             this.close();
         }
     });
+  } else {
+    template = jQuery('#your-message-template').html();
+    html = Mustache.render(template, {
+      text: message.text,
+      from: message.from,
+      createdAt: formattedTime
+    });
+    jQuery('#messages').append(html);
   }
   // //console.log('newMessage', message);
   // var formattedTime = moment(message.createdAt).format('h:mm a');

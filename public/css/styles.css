@@ -150,6 +150,14 @@ button:disabled {
 .message {
   padding: 12px;
   border-radius: 25px;
+  background-color: #265e6f;
+  margin-top: 10px;
+  display: table;
+  color: #fff;
+}
+.your-message {
+  padding: 12px;
+  border-radius: 25px;
   background-color: #314146;
   margin-top: 10px;
   display: table;
