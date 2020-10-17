@@ -84,7 +84,7 @@ button:disabled {
 
 .chat__sidebar {
   overflow-y: scroll;
-  width: 150px;
+  width: 160px;
   height: 100vh;
   background-color: #16b5f9;
 }
