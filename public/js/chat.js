@@ -67,8 +67,7 @@ socket.on('newMessage', function(message){
   // jQuery('#messages').append(li);
 });
 
-socket.on('newMessageNofify', function(message){
-  //implementing mustache.js template
+socket.on('newMessageNofify', function(messageNotify){
   var formattedTime = moment(message.createdAt).format('h:mm a');
 
   Push.create("New Message from: " message.from ' at' formattedTime, {
@@ -80,12 +79,6 @@ socket.on('newMessageNofify', function(message){
           this.close();
       }
   });
-
-  // //console.log('newMessage', message);
-  // var formattedTime = moment(message.createdAt).format('h:mm a');
-  // var li = jQuery('<li></li>');
-  // li.text(`${message.from} ${formattedTime}: ${message.text}`);
-  // jQuery('#messages').append(li);
 });
 
 
