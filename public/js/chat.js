@@ -60,26 +60,21 @@ socket.on('newMessage', function(message){
 
   jQuery('#messages').append(html);
   scrollToBottom();
-  // //console.log('newMessage', message);
-  // var formattedTime = moment(message.createdAt).format('h:mm a');
-  // var li = jQuery('<li></li>');
-  // li.text(`${message.from} ${formattedTime}: ${message.text}`);
-  // jQuery('#messages').append(li);
-});
 
-socket.on('newMessageNofify', function(messageNotify){
-  var formattedTime = moment(message.createdAt).format('h:mm a');
-
-  Push.create('New Message', {
-      body: message.text,
+  Push.create('New Message Sent/Received', {
+      body: message.from + " says: " + message.text,
       timeout: 4000,
       onClick: function () {
           window.focus();
           this.close();
       }
   });
+  // //console.log('newMessage', message);
+  // var formattedTime = moment(message.createdAt).format('h:mm a');
+  // var li = jQuery('<li></li>');
+  // li.text(`${message.from} ${formattedTime}: ${message.text}`);
+  // jQuery('#messages').append(li);
 });
-
 
 socket.on('newLocationMessage', function(message){
     var formattedTime = moment(message.createdAt).format('h:mm a');
