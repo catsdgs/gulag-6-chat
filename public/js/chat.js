@@ -50,7 +50,7 @@ socket.on('updateUserList', function (users) {
 
 socket.on('newMessage', function(message){
   //implementing mustache.js template
-  var currentName = urlParam(name);
+  var currentName = urlParam('name');
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
