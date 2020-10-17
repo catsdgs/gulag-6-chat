@@ -51,6 +51,8 @@ socket.on('updateUserList', function (users) {
 socket.on('newMessage', function(message){
   //implementing mustache.js template
   var currentName = urlParam('name');
+  var words = ['Rock', 'Paper', 'Scissors'];
+  var word = words[Math.floor(Math.random() * words.length)];
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
@@ -62,20 +64,10 @@ socket.on('newMessage', function(message){
   if (message.from === 'SERVER') {
     template = jQuery('#server-message-template').html();
     html = Mustache.render(template, {
-      text: message.text,
+      text: message.text + word,
       from: message.from,
       createdAt: formattedTime
     });
-    jQuery('#messages').append(html);
-  } else if(message.from != currentName) {
-    template = jQuery('#your-message-template').html();
-    html = Mustache.render(template, {
-      text: message.text,
-      from: message.from,
-      createdAt: formattedTime
-    });
-    jQuery('#messages').append(html);
-  } else {
     jQuery('#messages').append(html);
     scrollToBottom();
     Push.create('New Message Sent/Received', {
@@ -86,6 +78,26 @@ socket.on('newMessage', function(message){
             this.close();
         }
     });
+  } else if(message.from != currentName) {
+    jQuery('#messages').append(html);
+    scrollToBottom();
+    Push.create('New Message', {
+        body: message.from + " says: " + message.text,
+        timeout: 4000,
+        onClick: function () {
+            window.focus();
+            this.close();
+        }
+    });
+  } else {
+    template = jQuery('#your-message-template').html();
+    html = Mustache.render(template, {
+      text: message.text,
+      from: message.from,
+      createdAt: formattedTime
+    });
+    jQuery('#messages').append(html);
+    scrollToBottom();
   }
   // //console.log('newMessage', message);
   // var formattedTime = moment(message.createdAt).format('h:mm a');
