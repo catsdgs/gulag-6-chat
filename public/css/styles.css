@@ -163,7 +163,7 @@ button:disabled {
 }
 
 .message__title span {
-  color: #999;
+  color: #4d4d4d;
 }
 
 @media (max-width: 600px) {
