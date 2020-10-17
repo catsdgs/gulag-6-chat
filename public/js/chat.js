@@ -50,6 +50,7 @@ socket.on('updateUserList', function (users) {
 
 socket.on('newMessage', function(message){
   //implementing mustache.js template
+  var currentName = urlParam(name);
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
@@ -61,19 +62,27 @@ socket.on('newMessage', function(message){
   jQuery('#messages').append(html);
   scrollToBottom();
 
-  Push.create('New Message Sent/Received', {
-      body: message.from + " says: " + message.text,
-      timeout: 4000,
-      onClick: function () {
-          window.focus();
-          this.close();
-      }
-  });
+  if (message.from != currentName) {
+    Push.create('New Message Sent/Received', {
+        body: message.from + " says: " + message.text,
+        timeout: 4000,
+        onClick: function () {
+            window.focus();
+            this.close();
+        }
+    });
+  }
   // //console.log('newMessage', message);
   // var formattedTime = moment(message.createdAt).format('h:mm a');
   // var li = jQuery('<li></li>');
   // li.text(`${message.from} ${formattedTime}: ${message.text}`);
   // jQuery('#messages').append(li);
+  function urlParam(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    // Need to decode the URL parameters, including putting in a fix for the plus sign
+    // https://stackoverflow.com/a/24417399
+    return results ? decodeURIComponent(results[1].replace(/\+/g, '%20')) : null;
+}
 });
 
 socket.on('newLocationMessage', function(message){
