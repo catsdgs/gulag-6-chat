@@ -162,7 +162,6 @@ button:disabled {
   margin-top: 10px;
   display: table;
   color: #fff;
-  float: right;
 }
 .server-message {
   padding: 10px;
