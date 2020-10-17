@@ -59,7 +59,23 @@ socket.on('newMessage', function(message){
     createdAt: formattedTime
   });
 
-  if (message.from != currentName) {
+  if (message.from === 'SERVER') {
+    template = jQuery('#server-message-template').html();
+    html = Mustache.render(template, {
+      text: message.text,
+      from: message.from,
+      createdAt: formattedTime
+    });
+    jQuery('#messages').append(html);
+  } else if(message.from != currentName) {
+    template = jQuery('#your-message-template').html();
+    html = Mustache.render(template, {
+      text: message.text,
+      from: message.from,
+      createdAt: formattedTime
+    });
+    jQuery('#messages').append(html);
+  } else {
     jQuery('#messages').append(html);
     scrollToBottom();
     Push.create('New Message Sent/Received', {
@@ -70,14 +86,6 @@ socket.on('newMessage', function(message){
             this.close();
         }
     });
-  } else {
-    template = jQuery('#your-message-template').html();
-    html = Mustache.render(template, {
-      text: message.text,
-      from: message.from,
-      createdAt: formattedTime
-    });
-    jQuery('#messages').append(html);
   }
   // //console.log('newMessage', message);
   // var formattedTime = moment(message.createdAt).format('h:mm a');
