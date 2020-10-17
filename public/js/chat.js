@@ -70,7 +70,7 @@ socket.on('newMessage', function(message){
 socket.on('newMessageNofify', function(messageNotify){
   var formattedTime = moment(message.createdAt).format('h:mm a');
 
-  Push.create(('New Message from: ' message.from), {
+  Push.create('New Message', {
       body: message.text,
       icon: 'https://gulag.ga/favicon.ico',
       timeout: 4000,
