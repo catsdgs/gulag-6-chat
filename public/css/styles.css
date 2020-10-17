@@ -194,25 +194,25 @@ input::-webkit-input-placeholder {
 	color: #000
 }
 input:focus::-webkit-input-placeholder {
-	color: #fc2605
+	color: #16b5f9
 }
 input:-moz-placeholder {
 	color: #000
 }
 input:focus:-moz-placeholder {
-	color: #fc2605
+	color: #16b5f9
 }
 input::-moz-placeholder {
 	color: #000
 }
 input:focus::-moz-placeholder {
-	color: #2cbcae
+	color: #16b5f9
 }
 input:-ms-input-placeholder {
 	color: #000
 }
 input:focus:-ms-input-placeholder {
-	color: #fc2605
+	color: #16b5f9
 }
 .input-field label {
 	color: #000
