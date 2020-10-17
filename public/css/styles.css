@@ -164,9 +164,12 @@ button:disabled {
 .message__title h7 {
   font-weight: 600;
 }
+.message__title h7 b {
+  font-size: 19px;
+}
 
 .message__title span {
-  color: #4d4d4d;
+  color: #8b8f96;
 }
 
 @media (max-width: 600px) {
