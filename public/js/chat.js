@@ -71,8 +71,7 @@ socket.on('newMessageNofify', function(messageNotify){
   var formattedTime = moment(message.createdAt).format('h:mm a');
 
   Push.create('New Message', {
-      body: message.text,
-      icon: 'https://gulag.ga/favicon.ico',
+      body: message.text,,
       timeout: 4000,
       onClick: function () {
           window.focus();
