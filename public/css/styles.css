@@ -192,13 +192,13 @@ input::-webkit-input-placeholder {
 	color: #fff
 }
 input:focus::-webkit-input-placeholder {
-	color: #2cbcae
+	color: #fc2605
 }
 input:-moz-placeholder {
 	color: #fff
 }
 input:focus:-moz-placeholder {
-	color: #2cbcae
+	color: #fc2605
 }
 input::-moz-placeholder {
 	color: #fff
@@ -210,7 +210,7 @@ input:-ms-input-placeholder {
 	color: #fff
 }
 input:focus:-ms-input-placeholder {
-	color: #2cbcae
+	color: #fc2605
 }
 .input-field label {
 	color: #fff
