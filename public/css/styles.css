@@ -119,7 +119,7 @@ button:disabled {
 }
 
 .chat__footer {
-  background: #1b3248;
+  background: #16b5f9;
   display: flex;
   padding: 10px;
   /*height: 60px;*/
@@ -148,7 +148,7 @@ button:disabled {
 
 .message {
   padding: 10px;
-  background-color: #fca205;
+  background-color: #05fca2;
   margin-top: 10px;
   display: table;
 }
