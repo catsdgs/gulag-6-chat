@@ -150,9 +150,10 @@ button:disabled {
 .message {
   padding: 12px;
   border-radius: 30px;
-  background-color: #05fca2;
+  background-color: #314146;
   margin-top: 10px;
   display: table;
+  color: #fff;
 }
 
 .message__title {
@@ -160,9 +161,8 @@ button:disabled {
   margin-bottom: 5px;
 }
 
-.message__title h4 {
+.message__title h7 {
   font-weight: 600;
-  margin-right: 10px;
 }
 
 .message__title span {
