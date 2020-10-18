@@ -25,10 +25,12 @@ io.on('connection', (socket) => {
   // });
 
   socket.on('join', (params, callback) => {
+    var userList = (users.getUserList(params.room);
     if (!isRealString(params.name) || !isRealString(params.room)) {
       return callback('Name and room name are required');
-    }
-
+    } else if (userList.includes(params.name)) {
+      return callback('Someone in this room already has this name. Please change it');
+    } else {
     socket.join(params.room);
     users.removeUser(socket.id);
     users.addUser(socket.id, params.name, params.room);
@@ -52,6 +54,7 @@ io.on('connection', (socket) => {
     socket.broadcast.to(params.room).emit('newMessage', generateMessage('SERVER', `${params.name} has joined or opened their Chromebook. You better hide your`));
 
     callback();
+    }
   });
 
 
