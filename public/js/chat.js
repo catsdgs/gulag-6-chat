@@ -44,7 +44,6 @@ socket.on('updateUserList', function (users) {
 
   users.forEach(function (user) {
     nameColor = toHex(user);
-    nameColor = nameColor.substring(0,6);
     ol.append(jQuery(`<li style="color: #${nameColor}"></li>`).text(user));
   });
 
@@ -152,6 +151,9 @@ function toHex(str) {
   for (var i=0; i<str.length; i++) {
     result += str.charCodeAt(i).toString(16);
   }
+  result = result * 20
+  result = result + 12
+  result = result.substring(0,6);
   return result;
 }
 //event acknowledgement by adding callback function
