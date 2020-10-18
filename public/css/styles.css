@@ -165,6 +165,7 @@ button:disabled {
   color: #fff;
   float: right;
   clear: both;
+  text-align: right;
 }
 .server-message {
   padding: 7px;
