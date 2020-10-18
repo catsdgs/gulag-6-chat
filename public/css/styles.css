@@ -167,9 +167,11 @@ button:disabled {
   clear: both;
 }
 .server-message {
-  padding: 10px;
+  padding: 7px;
   margin-top: 10px;
+  display: table;
   color: #fff;
+  background-color: #171d21;
   clear: both;
 }
 
