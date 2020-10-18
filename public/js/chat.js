@@ -65,7 +65,7 @@ socket.on('newMessage', function(message){
   });
 
   if (message.from === 'SERVER') {
-    nameColor = fff;
+    nameColor = 'fff';
     template = jQuery('#server-message-template').html();
     html = Mustache.render(template, {
       color: nameColor,
