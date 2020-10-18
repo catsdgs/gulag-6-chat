@@ -85,7 +85,7 @@ socket.on('newMessage', function(message){
     });
   } else if(message.from != currentName) {
     nameColor = nameColor.substring(0,6);
-    template = jQuery('#server-message-template').html();
+    template = jQuery('#message-template').html();
     html = Mustache.render(template, {
       color: nameColor,
       text: message.text,
