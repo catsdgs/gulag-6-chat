@@ -55,7 +55,6 @@ io.on('connection', (socket) => {
     socket.broadcast.to(params.room).emit('newMessage', generateMessage('SERVER', `${params.name} has joined or opened their Chromebook. You better hide your`));
 
     callback();
-    }
   });
 
 
