@@ -5,7 +5,7 @@
   font-family: raleway, sans-serif;
   font-weight: 300;
   font-size: 1.1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 ul, li {
@@ -180,11 +180,11 @@ button:disabled {
   margin-bottom: 5px;
 }
 
-.message__title h8 {
+.message__title h7 {
   font-weight: 600;
   color: #fca205;
 }
-.message__title h8 b {
+.message__title h7 b {
 }
 
 .message__title span {
