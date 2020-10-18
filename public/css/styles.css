@@ -170,6 +170,7 @@ button:disabled {
 
 .message__title {
   margin-bottom: 5px;
+  clear: both;
 }
 
 .message__title h7 {
@@ -187,15 +188,22 @@ button:disabled {
   background-color: #314146;
   border-radius: 20px;
   padding: 12px;
+  width: fit-content;
+  float: right;
+  clear: both;
 }
 .server-message__body {
   background-color: #171d21;
   padding: 12px;
+  width: fit-content;
+  clear: both;
 }
 .message__body {
   background-color: #004e8c;
   border-radius: 20px;
   padding: 12px;
+  width: fit-content;
+  clear: both;
 }
 @media (max-width: 600px) {
   * {
