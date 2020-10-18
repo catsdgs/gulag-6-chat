@@ -4,8 +4,8 @@
   padding: 0;
   font-family: raleway, sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
-  line-height: 1.3;
+  font-size: 1.0rem;
+  line-height: 1.0;
 }
 
 ul, li {
@@ -179,7 +179,7 @@ button:disabled {
   font-weight: 600;
 }
 .message__title h7 b {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .message__title span {
