@@ -44,7 +44,8 @@ socket.on('updateUserList', function (users) {
 
   users.forEach(function (user) {
     nameColor = toHex(user);
-    nameColor = nameColor.substring(0,6);
+    // nameColor = nameColor.substring(0,6);
+    nameColor = nameColor.slice(nameColor.length - 6)
     ol.append(jQuery(`<li style="color: #${nameColor}"></li>`).text(user));
   });
 

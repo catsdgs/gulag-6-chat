@@ -93,7 +93,7 @@ io.on('connection', (socket) => {
 
     if (user){
       io.to(user.room).emit('updateUserList', users.getUserList(user.room));
-      io.to(user.room).emit('newMessage', generateMessage('SERVER', `${user.name} has left or closed their Chromebook. You can now show off your ${word}`));
+      io.to(user.room).emit('newMessage', generateMessage('SERVER', `${user.name} has left or closed their Chromebook. You can now show off your ${word}.`));
     }
   });
 });
