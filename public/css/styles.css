@@ -4,7 +4,7 @@
   padding: 0;
   font-family: raleway, sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.2;
 }
 
@@ -148,14 +148,12 @@ button:disabled {
 }
 
 .message {
-  padding: 12px;
   margin-top: 10px;
   display: table;
   color: #fff;
   clear: both;
 }
 .your-message {
-  padding: 12px;
   margin-top: 10px;
   display: table;
   color: #fff;
@@ -164,7 +162,6 @@ button:disabled {
   text-align: right;
 }
 .server-message {
-  padding: 7px;
   margin-top: 10px;
   display: table;
   color: #fff;
@@ -189,16 +186,16 @@ button:disabled {
 .your-message__body {
   background-color: #314146;
   border-radius: 20px;
-  padding: 10px;
+  padding: 12px;
 }
 .server-message__body {
   background-color: #171d21;
-  padding: 10px;
+  padding: 12px;
 }
 .message__body {
   background-color: #004e8c;
   border-radius: 20px;
-  padding: 10px;
+  padding: 12px;
 }
 @media (max-width: 600px) {
   * {
