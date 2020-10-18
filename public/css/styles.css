@@ -154,6 +154,7 @@ button:disabled {
   margin-top: 10px;
   display: table;
   color: #fff;
+  clear: both;
 }
 .your-message {
   padding: 12px;
@@ -162,12 +163,15 @@ button:disabled {
   margin-top: 10px;
   display: table;
   color: #fff;
+  float: right;
+  clear: both;
 }
 .server-message {
   padding: 10px;
   margin-top: 10px;
   display: table;
   color: #fff;
+  clear: both;
 }
 
 .message__title {
