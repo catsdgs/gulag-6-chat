@@ -38,11 +38,12 @@ socket.on('disconnect', function(){
 });
 
 socket.on('updateUserList', function (users) {
-  var nameColor = toHex(user);
   //console.log('Users list', users);
+  var nameColor = 'fff';
   var ol = jQuery('<ol></ol>');
 
   users.forEach(function (user) {
+    nameColor = toHex(user);
     ol.append(jQuery(`<li style="color: #${nameColor}"></li>`).text(user));
   });
 
