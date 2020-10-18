@@ -38,11 +38,12 @@ socket.on('disconnect', function(){
 });
 
 socket.on('updateUserList', function (users) {
+  var nameColor = toHex(user);
   //console.log('Users list', users);
   var ol = jQuery('<ol></ol>');
 
   users.forEach(function (user) {
-    ol.append(jQuery('<li></li>').text(user));
+    ol.append(jQuery('<li style="color: #'user'"></li>').text(user));
   });
 
   jQuery('#users').html(ol);
@@ -51,6 +52,7 @@ socket.on('updateUserList', function (users) {
 socket.on('newMessage', function(message){
   //implementing mustache.js template
   var currentName = urlParam('name');
+  var nameColor = toHex(message.from);
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
@@ -118,7 +120,6 @@ socket.on('newLocationMessage', function(message){
       createdAt: formattedTime,
       url: message.url
     });
-
     jQuery('#messages').append(html);
     scrollToBottom();
 	  // var li = jQuery('<li></li>');
@@ -131,7 +132,13 @@ socket.on('newLocationMessage', function(message){
     // li.append(a);
     // jQuery('#messages').append(li);
 });
-
+function toHex(str) {
+  var result = '';
+  for (var i=0; i<str.length; i++) {
+    result += str.charCodeAt(i).toString(16);
+  }
+  return result;
+}
 //event acknowledgement by adding callback function
 // socket.emit('createMessage', {
 //   from: 'person x',
