@@ -58,14 +58,17 @@ socket.on('newMessage', function(message){
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
+    color: message.text,
     text: message.text,
     from: message.from,
     createdAt: formattedTime
   });
 
   if (message.from === 'SERVER') {
+    nameColor = fff;
     template = jQuery('#server-message-template').html();
     html = Mustache.render(template, {
+      color: nameColor,
       text: message.text,
       from: message.from,
       createdAt: formattedTime
@@ -81,6 +84,14 @@ socket.on('newMessage', function(message){
         }
     });
   } else if(message.from != currentName) {
+    nameColor = nameColor.substring(0,6);
+    template = jQuery('#server-message-template').html();
+    html = Mustache.render(template, {
+      color: nameColor,
+      text: message.text,
+      from: message.from,
+      createdAt: formattedTime
+    });
     jQuery('#messages').append(html);
     scrollToBottom();
     Push.create('New Message', {
@@ -92,8 +103,10 @@ socket.on('newMessage', function(message){
         }
     });
   } else {
+    nameColor = nameColor.substring(0,6);
     template = jQuery('#your-message-template').html();
     html = Mustache.render(template, {
+      color: nameColor,
       text: message.text,
       from: message.from,
       createdAt: formattedTime
