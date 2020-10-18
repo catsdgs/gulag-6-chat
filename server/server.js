@@ -31,9 +31,6 @@ io.on('connection', (socket) => {
     if (users.getUserList(params.room).includes(params.name) === true) {
       return callback('Someone in this room already has this name. Please change it.');
     }
-    if (badWords.includes(params.Name) === true) {
-      return callback('Your name is not appropriate. Please change it.');
-    }
     socket.join(params.room);
     users.removeUser(socket.id);
     users.addUser(socket.id, params.name, params.room);
@@ -68,7 +65,11 @@ io.on('connection', (socket) => {
     var user = users.getUser(socket.id);
 
     if (user && isRealString(message.text)) {
-      io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
+      if (badWords.includes(message.text) === true) {
+        io.to(user.room).emit('newMessage', generateMessage(user.name, "[CENSORED]"));
+      } else
+      io.to(user.room).emit('newMessage', generateMessage(user.name, message.text))
+    }
     }
 
     callback();
