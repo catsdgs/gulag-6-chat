@@ -149,8 +149,6 @@ button:disabled {
 
 .message {
   padding: 12px;
-  border-radius: 20px;
-  background-color: #004e8c;
   margin-top: 10px;
   display: table;
   color: #fff;
@@ -158,8 +156,6 @@ button:disabled {
 }
 .your-message {
   padding: 12px;
-  border-radius: 20px;
-  background-color: #314146;
   margin-top: 10px;
   display: table;
   color: #fff;
@@ -172,7 +168,6 @@ button:disabled {
   margin-top: 10px;
   display: table;
   color: #fff;
-  background-color: #171d21;
   clear: both;
 }
 
@@ -191,7 +186,20 @@ button:disabled {
   color: #8b8f96;
   font-size: 13px;
 }
-
+.your-message__body {
+  background-color: #314146;
+  border-radius: 20px;
+  padding: 10px;
+}
+.server-message__body {
+  background-color: #171d21;
+  padding: 10px;
+}
+.message__body {
+  background-color: #004e8c;
+  border-radius: 20px;
+  padding: 10px;
+}
 @media (max-width: 600px) {
   * {
     font-size: 1rem;
