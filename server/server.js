@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
     // socket.emit
 
     //greeting
-    socket.emit('newMessage', generateMessage('SERVER', `Welcome to the Goolag chatting service! Please remember to hide your ${word}.`));
+    socket.emit('newMessage', generateMessage('SERVER', `Welcome to the Goolag chatting service! We hope that you enjoy your stay.`));
 
     //new user joined
     socket.broadcast.to(params.room).emit('newMessage', generateMessage('SERVER', `${params.name} has joined or opened their Chromebook. You better hide your ${word}.`));
@@ -93,7 +93,7 @@ io.on('connection', (socket) => {
 
     if (user){
       io.to(user.room).emit('updateUserList', users.getUserList(user.room));
-      io.to(user.room).emit('newMessage', generateMessage('SERVER', `${user.name} has left or closed their Chromebook. You can now show off your ${word}.`));
+      io.to(user.room).emit('newMessage', generateMessage('SERVER', `${user.name} has left or closed their Chromebook. You are now more lonely.`));
     }
   });
 });
