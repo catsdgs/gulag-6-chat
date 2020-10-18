@@ -84,7 +84,7 @@ button:disabled {
 
 .chat__sidebar {
   overflow-y: scroll;
-  width: 160px;
+  width: 200px;
   height: 100vh;
   background-color: #16b5f9;
 }
@@ -150,7 +150,7 @@ button:disabled {
 .message {
   padding: 12px;
   border-radius: 25px;
-  background-color: #265e6f;
+  background-color: #004e8c;
   margin-top: 10px;
   display: table;
   color: #fff;
@@ -175,7 +175,6 @@ button:disabled {
 }
 
 .message__title {
-  display: flex;
   margin-bottom: 5px;
 }
 
