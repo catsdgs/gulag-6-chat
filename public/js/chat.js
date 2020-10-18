@@ -44,6 +44,7 @@ socket.on('updateUserList', function (users) {
 
   users.forEach(function (user) {
     nameColor = toHex(user);
+    nameColor = nameColor.substring(0,6);
     ol.append(jQuery(`<li style="color: #${nameColor}"></li>`).text(user));
   });
 
@@ -146,15 +147,8 @@ socket.on('newLocationMessage', function(message){
     // li.append(a);
     // jQuery('#messages').append(li);
 });
-function toHex(str) {
-  var result = '';
-  for (var i=0; i<str.length; i++) {
-    result += str.charCodeAt(i).toString(16);
-  }
-  result = result * 20
-  result = result + 12
-  result = result.substring(0,6);
-  return result;
+function toHex(string) {
+  return new TextEncoder().encode(string);
 }
 //event acknowledgement by adding callback function
 // socket.emit('createMessage', {
