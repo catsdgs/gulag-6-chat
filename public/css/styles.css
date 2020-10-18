@@ -149,7 +149,7 @@ button:disabled {
 
 .message {
   padding: 12px;
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: #004e8c;
   margin-top: 10px;
   display: table;
@@ -158,7 +158,7 @@ button:disabled {
 }
 .your-message {
   padding: 12px;
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: #314146;
   margin-top: 10px;
   display: table;
