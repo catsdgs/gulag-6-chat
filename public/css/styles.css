@@ -192,11 +192,16 @@ button:disabled {
   width: max-content;
   float: right;
   clear: both;
+  max-width: 90vw;
+  word-wrap: break-word;
 }
 .server-message__body {
   background-color: #171d21;
   padding: 12px;
   clear: both;
+  width: max-content;
+  max-width: 90vw;
+  word-wrap: break-word;
 }
 .message__body {
   background-color: #004e8c;
@@ -204,6 +209,8 @@ button:disabled {
   padding: 12px;
   width: max-content;
   clear: both;
+  max-width: 90vw;
+  word-wrap: break-word;
 }
 @media (max-width: 600px) {
   * {
