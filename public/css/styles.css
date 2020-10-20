@@ -189,7 +189,7 @@ button:disabled {
   background-color: #314146;
   border-radius: 20px;
   padding: 12px;
-  width: min-content;
+  width: max-content;
   float: right;
   clear: both;
 }
@@ -202,7 +202,7 @@ button:disabled {
   background-color: #004e8c;
   border-radius: 20px;
   padding: 12px;
-  width: min-content;
+  width: max-content;
   clear: both;
 }
 @media (max-width: 600px) {
