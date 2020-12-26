@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
     // socket.emit
 
     //greeting
-    socket.emit('newMessage', generateMessage('SERVER', `Welcome to the Goolag chatting service! We hope that you enjoy your stay.`));
+    socket.emit('newMessage', generateMessage('SERVER', `Welcome to Goolag Babble! We hope that you enjoy your stay.`));
 
     //new user joined
     socket.broadcast.to(params.room).emit('newMessage', generateMessage('SERVER', `${params.name} has joined or opened their Chromebook. You better hide your ${word}.`));
