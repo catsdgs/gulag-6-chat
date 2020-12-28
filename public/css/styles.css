@@ -197,7 +197,7 @@ button:disabled {
   width: max-content;
   float: right;
   clear: both;
-  max-width: 90vw;
+  max-width: 78vw;
   word-wrap: break-word;
 }
 .server-message__body {
@@ -205,7 +205,7 @@ button:disabled {
   padding: 12px;
   clear: both;
   width: max-content;
-  max-width: 80vw;
+  max-width: 78vw;
   word-wrap: break-word;
 }
 .message__body {
