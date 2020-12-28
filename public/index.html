@@ -21,10 +21,10 @@
           <p>Join a room</p>
         </div>
         <div class="form-field">
-          <input type="text" name="room" placeholder="Room name..." autofocus/>
+          <input type="text" name="room" id="room" placeholder="Room name..."/>
         </div>
         <div class="form-field">
-          <input type="text" name="name" placeholder="Display name..."/>
+          <input type="text" name="name" id="name" placeholder="Display name..."/>
         </div>
         <div class="form-field">
           <button class="btn">Join</button>
@@ -32,4 +32,15 @@
       </form>
     </div>
   </body>
+  <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    setTimeout(() => {
+      document.getElementById("room").focus();
+    }, 150)
+  });
+  </script>
 </html>
