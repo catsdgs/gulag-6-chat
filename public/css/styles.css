@@ -283,3 +283,6 @@ input:focus:-ms-input-placeholder {
 .input-field .prefix.active {
 	color: #000
 }
+.main-hr {
+  color: #182F56
+}
