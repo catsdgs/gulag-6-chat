@@ -284,5 +284,8 @@ input:focus:-ms-input-placeholder {
 	color: #000
 }
 .main-hr {
-  color: #182F56
+  color: #182F56;
+  border-color: #182F56;
+  background-color: #182F56;
+  height: 2px;
 }
