@@ -55,6 +55,13 @@ button:disabled {
   width: 100vw;
   justify-content: center;
   background-color: #182F56;
+}
+
+.centered-form__form {
+  background-color: #fca205;
+  padding: 0px 20px;
+  margin: 20px;
+  width: 230px;
   animation: 0.4s ease-out 0s 1 slideInFromLeft;
 }
 @keyframes slideInFromLeft {
@@ -64,13 +71,6 @@ button:disabled {
   100% {
     transform: translateX(0);
   }
-}
-
-.centered-form__form {
-  background-color: #fca205;
-  padding: 0px 20px;
-  margin: 20px;
-  width: 230px;
 }
 
 .form-field {
