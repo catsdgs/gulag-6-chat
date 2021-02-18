@@ -223,7 +223,7 @@ button:disabled {
   padding: 12px;
   width: max-content;
   clear: both;
-  max-width: 90vw;
+  max-width: 78vw;
   word-wrap: break-word;
 }
 @media (max-width: 600px) {
