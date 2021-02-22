@@ -417,6 +417,6 @@ input:focus:-ms-input-placeholder {
   background-color: #FCA205;
   height: 2px;
 }
-.message-input {
+#message-input {
   width: 90%;
 }
