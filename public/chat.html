@@ -24,7 +24,7 @@
       <ol id="messages" class="chat__messages"></ol>
       <div class="chat__footer">
         <form id="message-form">
-          <input type="text" name="message" placeholder="Type message here..." autofocus autocomplete="off">
+          <input id="message-input" type="text" name="message" placeholder="Type message here..." autofocus autocomplete="off">
           <button class="btn">Send<i class="material-icons right">send</i></button>
         </form>
       </div>
@@ -73,7 +73,7 @@
       </li>
     </script>
 
-    <script id="location-message-template" type="text/template">
+    <!-- <script id="location-message-template" type="text/template">
       <li class="message">
         <div class="message__title">
           <h4>{{from}}</h4>
@@ -85,7 +85,7 @@
           </p>
         </div>
       </li>
-    </script>
+    </script> -->
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.2.1.min.js"></script>

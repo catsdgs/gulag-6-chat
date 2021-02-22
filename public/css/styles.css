@@ -137,7 +137,7 @@ h4 {
 }
 .btn {
 	background-color: #05fca2;
-	color: #012216;
+	color: #000;
 }
 
 /* button {
@@ -416,4 +416,7 @@ input:focus:-ms-input-placeholder {
   border-color: #FCA205;
   background-color: #FCA205;
   height: 2px;
+}
+.message-input {
+  width: 90%;
 }
